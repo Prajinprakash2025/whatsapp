@@ -36,6 +36,34 @@ const chatManager = {
     if (sendBtn) {
       sendBtn.addEventListener('click', () => this.sendMessage());
     }
+
+    // Emoji button
+    const emojiBtn = document.getElementById('emoji-btn');
+    const emojiPicker = document.getElementById('emoji-picker');
+    if (emojiBtn && emojiPicker) {
+      emojiBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        emojiPicker.style.display = emojiPicker.style.display === 'none' ? 'block' : 'none';
+      });
+
+      // Click on emoji to insert
+      emojiPicker.addEventListener('click', (e) => {
+        if (e.target.textContent && e.target.textContent.trim().length <= 2) {
+          const emoji = e.target.textContent.trim();
+          if (emoji && messageInput) {
+            messageInput.value += emoji;
+            messageInput.focus();
+          }
+        }
+      });
+
+      // Close emoji picker when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!emojiPicker.contains(e.target) && e.target !== emojiBtn) {
+          emojiPicker.style.display = 'none';
+        }
+      });
+    }
   },
 
   // Load contacts

@@ -661,6 +661,55 @@ a:hover {
   transform: scale(0.95);
 }
 
+/* Emoji Picker Styles */
+.emoji-btn {
+  width: 40px;
+  height: 40px;
+  color: var(--text-secondary);
+}
+
+.emoji-picker {
+  position: absolute;
+  bottom: 70px;
+  left: var(--spacing-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-xl);
+  z-index: 1000;
+  animation: slideUp 0.2s ease-out;
+}
+
+.emoji-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 4px;
+  max-width: 400px;
+  max-height: 300px;
+  overflow-y: auto;
+  font-size: 24px;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.emoji-grid::-webkit-scrollbar {
+  width: 6px;
+}
+
+.emoji-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.emoji-grid::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: var(--radius-full);
+}
+
+.message-input-container {
+  position: relative;
+}
+
 /* ===================================
    RESPONSIVE DESIGN
    =================================== */
