@@ -64,6 +64,32 @@ const chatManager = {
         }
       });
     }
+
+    // Mobile menu buttons
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileContactsBtn = document.getElementById('mobile-contacts-btn');
+    const sidebar = document.querySelector('.sidebar');
+
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', () => {
+        sidebar.classList.add('mobile-visible');
+      });
+    }
+
+    if (mobileContactsBtn) {
+      mobileContactsBtn.addEventListener('click', () => {
+        sidebar.classList.add('mobile-visible');
+      });
+    }
+
+    // Close sidebar when contact is clicked on mobile
+    if (sidebar) {
+      sidebar.addEventListener('click', (e) => {
+        if (e.target.closest('.contact-item')) {
+          sidebar.classList.remove('mobile-visible');
+        }
+      });
+    }
   },
 
   // Load contacts

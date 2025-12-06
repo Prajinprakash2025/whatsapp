@@ -92,6 +92,15 @@
         <!-- Main Chat Area -->
         <main class="chat-main">
             <div class="empty-state" id="empty-state">
+                <button id="mobile-contacts-btn" class="mobile-contacts-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    View Contacts
+                </button>
                 <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
                     <circle cx="60" cy="60" r="55" fill="#E8F5E9"/>
                     <path d="M60 30C43.5 30 30 43.5 30 60C30 66 32.25 71.5 35.75 76.25L30.25 89.75L44.25 84.25C48.75 87.5 54.15 89.75 60 89.75C76.5 89.75 90 76.25 90 59.75C90 43.25 76.5 30 60 30Z" fill="#25D366"/>
@@ -103,6 +112,13 @@
 
             <div class="chat-window" id="chat-window" style="display: none;">
                 <div class="chat-header">
+                    <button id="mobile-menu-btn" class="icon-btn mobile-menu-btn" title="Menu">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
                     <div class="chat-user-info">
                         <img id="chat-user-avatar" src="" alt="User" class="avatar">
                         <div>

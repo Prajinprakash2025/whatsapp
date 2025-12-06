@@ -733,6 +733,40 @@ a:hover {
   position: relative;
 }
 
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: none;
+  margin-right: var(--spacing-md);
+}
+
+.mobile-contacts-btn {
+  display: none;
+  margin: var(--spacing-lg) auto;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+  gap: var(--spacing-sm);
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-contacts-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.mobile-contacts-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
 /* ===================================
    RESPONSIVE DESIGN
    =================================== */
@@ -756,6 +790,16 @@ a:hover {
     right: 0;
     bottom: 0;
     z-index: 100;
+    background: var(--bg-secondary);
+  }
+
+  /* Show mobile menu buttons */
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+
+  .mobile-contacts-btn {
+    display: flex !important;
   }
 
   /* Make sure chat window is visible on mobile */
