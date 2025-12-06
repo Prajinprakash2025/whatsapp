@@ -737,14 +737,17 @@ a:hover {
    RESPONSIVE DESIGN
    =================================== */
 @media (max-width: 768px) {
+  /* Mobile layout - show chat window, hide sidebar by default */
   .chat-container {
     grid-template-columns: 1fr;
   }
   
+  /* Hide sidebar on mobile by default */
   .sidebar {
     display: none;
   }
   
+  /* Show sidebar when toggled */
   .sidebar.mobile-visible {
     display: flex;
     position: fixed;
@@ -753,6 +756,16 @@ a:hover {
     right: 0;
     bottom: 0;
     z-index: 100;
+  }
+
+  /* Make sure chat window is visible on mobile */
+  .chat-window {
+    display: flex !important;
+  }
+
+  /* Hide empty state on mobile if chat is active */
+  .empty-state {
+    padding: var(--spacing-xl) var(--spacing-md);
   }
   
   .message-bubble {
@@ -782,6 +795,20 @@ a:hover {
     width: 32px;
     height: 32px;
     font-size: 22px;
+  }
+
+  /* Mobile viewport fix */
+  body {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    height: -webkit-fill-available;
+  }
+
+  .chat-container {
+    height: 100vh;
+    height: -webkit-fill-available;
   }
 }
 
@@ -825,5 +852,15 @@ a:hover {
   .message-input-container {
     padding: var(--spacing-sm);
   }
+
+  /* Smaller header on mobile */
+  .chat-header {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .sidebar-header {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
 }
+
 
