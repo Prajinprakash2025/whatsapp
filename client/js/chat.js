@@ -48,8 +48,8 @@ const chatManager = {
 
       // Click on emoji to insert
       emojiPicker.addEventListener('click', (e) => {
-        if (e.target.textContent && e.target.textContent.trim().length <= 2) {
-          const emoji = e.target.textContent.trim();
+        if (e.target.classList.contains('emoji-item')) {
+          const emoji = e.target.textContent;
           if (emoji && messageInput) {
             messageInput.value += emoji;
             messageInput.focus();

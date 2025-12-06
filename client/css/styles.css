@@ -679,22 +679,22 @@ a:hover {
   box-shadow: var(--shadow-xl);
   z-index: 1000;
   animation: slideUp 0.2s ease-out;
+  width: 350px;
 }
 
 .emoji-grid {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 4px;
-  max-width: 400px;
-  max-height: 300px;
+  max-height: 320px;
   overflow-y: auto;
-  font-size: 24px;
-  line-height: 1.2;
-  cursor: pointer;
+  padding: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) transparent;
 }
 
 .emoji-grid::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 
 .emoji-grid::-webkit-scrollbar-track {
@@ -704,6 +704,29 @@ a:hover {
 .emoji-grid::-webkit-scrollbar-thumb {
   background: var(--border-color);
   border-radius: var(--radius-full);
+}
+
+/* Individual emoji items - Instagram style */
+.emoji-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.emoji-item:hover {
+  background: var(--hover-bg);
+  transform: scale(1.2);
+}
+
+.emoji-item:active {
+  transform: scale(1.1);
 }
 
 .message-input-container {
