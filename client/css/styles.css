@@ -758,6 +758,31 @@ a:hover {
   .message-bubble {
     max-width: 80%;
   }
+
+  /* Better touch targets for mobile */
+  .btn-send {
+    width: 44px;
+    height: 44px;
+  }
+
+  .icon-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Emoji picker mobile adjustments */
+  .emoji-picker {
+    width: 90vw;
+    max-width: 350px;
+    left: 5vw;
+    bottom: 60px;
+  }
+
+  .emoji-item {
+    width: 32px;
+    height: 32px;
+    font-size: 22px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -767,9 +792,38 @@ a:hover {
   
   .message-bubble {
     max-width: 85%;
+    font-size: var(--font-size-sm);
   }
   
   .messages-container {
     padding: var(--spacing-md);
   }
+
+  /* Smaller emoji picker for small phones */
+  .emoji-picker {
+    width: 95vw;
+    left: 2.5vw;
+    padding: var(--spacing-sm);
+  }
+
+  .emoji-grid {
+    gap: 2px;
+    padding: 4px;
+  }
+
+  .emoji-item {
+    width: 28px;
+    height: 28px;
+    font-size: 20px;
+  }
+
+  /* Adjust input for small screens */
+  .message-input {
+    font-size: var(--font-size-sm);
+  }
+
+  .message-input-container {
+    padding: var(--spacing-sm);
+  }
 }
+
